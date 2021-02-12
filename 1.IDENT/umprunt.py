@@ -1,5 +1,4 @@
 import tkinter as Tik
-import random as r
 from PIL import ImageTk
 
 class Interface():
