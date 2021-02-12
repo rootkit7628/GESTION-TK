@@ -22,7 +22,8 @@ class Interface():
         self.logo_img = ImageTk.PhotoImage(file='Assets/user.png')
         self.logo = Tik.Label(self.root, image=self.logo_img).place(relx=0.7, rely=0.15)
 
-        # self.jauge = 
+        self.jauge = Tik.Frame(self.root, bg='white')
+        self.jauge.place(relx=0.6, rely=0.4)
 
 
     def finale(self):
