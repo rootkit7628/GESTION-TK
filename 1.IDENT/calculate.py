@@ -14,7 +14,7 @@ class Interface():
 
         #Les entrée du calculatrice
         self.clcl = Tik.StringVar()
-        self.calcl_input = Tik.Entry(self.root, textvariable=self.clcl, bg='white',font=18, borderwidth='0c',fg='blue').place(relx=0.1, rely=0.05, width=255, height=40)
+        Tik.Entry(self.root, textvariable=self.clcl, bg='white',font=18, borderwidth='0c',fg='blue').place(relx=0.1, rely=0.05, width=255, height=40)
 
         # Clavier virtuel
         self.clavierVirtual = Tik.Frame(self.root)
