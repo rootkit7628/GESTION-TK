@@ -1,0 +1,33 @@
+[project]
+name = "gestion-tk"
+version = "2.0.0"
+description = "Gestion bancaire de bureau : comptes, virements, emprunt et budget (Tkinter + SQLite)"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+gestion-tk = "gestion_tk.__main__:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["gestion_tk"]
+
+[tool.uv]
+# The system Python's Tk (python3-tk on Debian/Ubuntu) renders the desktop's fonts; the Tk bundled
+# with some uv-managed Pythons only sees bitmap X11 fonts.
+python-preference = "system"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,3 +1,0 @@
-setup-tools
-pillow
-tkinter
